@@ -30,17 +30,8 @@ pub fn build(b: *std.Build) void {
     // running `zig build`).
     b.installArtifact(lib);
 
-    // TODO: go back to module once fix is in place for iocp socket errors
-    //const xev = b.dependency("libxev", .{ .target = target, .optimize = optimize });
-    //lib.addModule("xev", xev.module("xev"));
-    _ = lib.addAnonymousModule("xev", .{
-        .source_file = .{ .path = "libxev/src/main.zig" },
-    });
-    // const xev_dep = b.anonymousDependency("xev", @import("libxev/build.zig"), .{
-    //     .target = target,
-    //     .optimize = optimize,
-    // });
-    // lib.linkLibrary(xev_dep.artifact("xev"));
+    const xev = b.dependency("libxev", .{ .target = target, .optimize = optimize });
+    lib.addModule("xev", xev.module("xev"));
 
     // Creates a step for unit testing. This only builds the test executable
     // but does not run it.

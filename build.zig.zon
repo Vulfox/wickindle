@@ -3,8 +3,8 @@
     .version = "0.0.1",
     .dependencies = .{
         .libxev = .{
-            .url = "https://github.com/mitchellh/libxev/archive/ecbc161a5dace26a1fd47e494f8be2cfd051cbfb.tar.gz",
-            .hash = "1220f34357168affd9aab1a3fcafcaff093c44beb75ce1d4d4b75490e90729221771",
+            .url = "https://github.com/mitchellh/libxev/archive/0c0ce75d7a82105a8a8bda1516a05fc149171917.tar.gz",
+            .hash = "12202b5c94b52d22e6efb657ad6d89145fb6061e3e5d3a08147c19dc7633d2467e31",
         },
     },
 }
