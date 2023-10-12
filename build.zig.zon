@@ -1,0 +1,10 @@
+.{
+    .name = "wickindle",
+    .version = "0.0.1",
+    .dependencies = .{
+        .libxev = .{
+            .url = "https://github.com/mitchellh/libxev/archive/ecbc161a5dace26a1fd47e494f8be2cfd051cbfb.tar.gz",
+            .hash = "1220f34357168affd9aab1a3fcafcaff093c44beb75ce1d4d4b75490e90729221771",
+        },
+    },
+}
